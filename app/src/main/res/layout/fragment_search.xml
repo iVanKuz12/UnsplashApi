@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SearchFragment">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/input"
+        style="@style/material_edit_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="@string/hint_edit_text"
+        app:met_baseColor="@color/toolbar_color"
+        app:met_primaryColor="@color/primary_dark_color"
+        app:met_textColor="@color/black"
+        app:met_textColorHint="@color/toolbar_color"
+        app:met_floatingLabel="normal"
+        app:met_helperText="@string/helper_edit_text"
+        />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/btn_text"
+        android:textColor="@color/white"
+        android:background="@color/toolbar_color"
+        android:textAllCaps="false"
+        android:layout_marginRight="@dimen/material_margin_start" />
+
+
+</android.support.constraint.ConstraintLayout>

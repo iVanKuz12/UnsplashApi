@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="fragment1">Fragment 1</string>
+    <string name="fragment2">Fragment 2</string>
+    <string name="hint_edit_text">Enter</string>
+    <string name="btn_text">Search</string>
+    <string name="helper_edit_text">Enter your search</string>
+    <string name="exit_app">Для выхода нажмите еще раз назад</string>
+</resources>
