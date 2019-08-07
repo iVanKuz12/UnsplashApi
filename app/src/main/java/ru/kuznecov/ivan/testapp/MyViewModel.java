@@ -3,6 +3,7 @@ package ru.kuznecov.ivan.testapp;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
+import android.util.Log;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -45,6 +46,7 @@ public class MyViewModel extends ViewModel {
     public void loadNextPages(){
         if (countPage >= pages + 1) {
             pages += 1;
+            Log.d("TAG", "loadNextPages: " + pages);
             reqestData(pages);
         }
     }

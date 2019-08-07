@@ -57,6 +57,7 @@ public class ResultFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         initRecyclerView(view);
+
         viewModel = ViewModelProviders.of(this).get(MyViewModel.class);
         viewModel.setQuery(query);
         liveData = viewModel.getLiveData();

@@ -1,5 +1,6 @@
 package ru.kuznecov.ivan.testapp;
 
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -17,9 +18,17 @@ public class MainActivity extends AppCompatActivity
     private boolean time = false;
 
     @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        outState.putBoolean(TAG, searchFragmentshow);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (savedInstanceState != null)
+            searchFragmentshow = savedInstanceState.getBoolean(TAG, false);
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 
